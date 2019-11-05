@@ -15,14 +15,6 @@ class CashRegister
     @items = []
   end
   
-  # def self.all 
-  # @@all 
-  # end
-  
-  # def total=(total)
-  #   @total
-  # end
-  
   def total 
     @total
   end
