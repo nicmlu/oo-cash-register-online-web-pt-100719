@@ -15,14 +15,6 @@ class CashRegister
     @items = []
   end
   
-  # def self.all 
-  # @@all 
-  # end
-  
-  # def total=(total)
-  #   @total
-  # end
-  
   def total 
     @total
   end
@@ -56,15 +48,15 @@ class CashRegister
         @price = price
         @quantity = quantity
         @quantity.times do
-            self.items << @title
+            @items << @title
         end
-        self.total += (price * quantity)
+        @total += (@price * @quantity)
     end
   
   def apply_discount
-    if self.discount > 0
-      self.total -= (self.discount * self.total)/100
-    "After the discount, the total comes to $#{self.total}."
+    if @discount > 0
+      @total -= (@discount * @total)/100
+    "After the discount, the total comes to $#{@total}."
   else 
     "There is no discount to apply."
     end
@@ -75,21 +67,7 @@ class CashRegister
   end
   
   def void_last_transaction 
-    # binding.pry 
-    # @items.size > 0 ? @total -= (@price * @quantity) : @total == 0.0
-     
-    # counter = 0 
-    # while counter < @quantity
-    
-    # counter -= 2 
-    # binding.pry
-    # end
-    # @total 
-    
-  # @total - (@price * @quantity)
-  # @final_total = @total - @price
-  
-  self.total -= (self.price * self.quantity)
+  @total -= (@price * @quantity)
   end
   
 end
