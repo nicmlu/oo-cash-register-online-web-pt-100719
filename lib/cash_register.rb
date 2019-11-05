@@ -50,7 +50,7 @@ class CashRegister
         @quantity.times do
             @items << @title
         end
-        @total += (price * quantity)
+        @total += (@price * @quantity)
     end
   
   def apply_discount
