@@ -67,21 +67,7 @@ class CashRegister
   end
   
   def void_last_transaction 
-    # binding.pry 
-    # @items.size > 0 ? @total -= (@price * @quantity) : @total == 0.0
-     
-    # counter = 0 
-    # while counter < @quantity
-    
-    # counter -= 2 
-    # binding.pry
-    # end
-    # @total 
-    
-  # @total - (@price * @quantity)
-  # @final_total = @total - @price
-  
-  self.total -= (self.price * self.quantity)
+  @total -= (@price * @quantity)
   end
   
 end
